@@ -11,7 +11,5 @@ class ListaUsuariosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_usuarios)
-        Log.i("Ciclo de Vida", "ListaUsuariosActivity.onCreate")
     }
-
 }
