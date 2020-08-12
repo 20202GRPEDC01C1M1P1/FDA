@@ -14,12 +14,14 @@ class ListaUsuariosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_usuarios)
 
-        // btnAct1 -> Activity1::class.java
         btnAct1.setOnClickListener {
-            var intent = Intent(
+            var tansicao = Intent(
                     this, Activity1::class.java
                 )
-            startActivity(intent)
+            tansicao.putExtra("idade", 10)
+            tansicao.putExtra("cidade", "Rio de Janeiro")
+
+            startActivity(tansicao)
         }
 
         // btnAct2 -> Activity2::class.java

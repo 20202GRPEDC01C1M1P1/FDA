@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         btnLancarDado.setOnClickListener {
             var intentListaUsuarios = Intent(
                     this,
-                    ListaUsuariosActivity::class.java
+                    FormImcActivity::class.java
                 ) // Intent
             startActivity(intentListaUsuarios)
         }
