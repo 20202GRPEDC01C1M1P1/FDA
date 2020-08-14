@@ -15,16 +15,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        btnLancarDado.visibility = View.GONE
-
-        // Classe Usuario
-        // var user = Usuario()
 
         btnLancarDado.setOnClickListener {
-            var intentListaUsuarios = Intent(
+            var intentListaUsuarios =
+                Intent(
                     this,
-                    FormImcActivity::class.java
-                ) // Intent
+                    ListaUsuariosActivity::class.java
+                )
+
             startActivity(intentListaUsuarios)
         }
 

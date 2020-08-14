@@ -6,43 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".activity.FormImcActivity">
 
-    <EditText
-        android:id="@+id/edTxtAltura"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:hint="Altura"
-        android:inputType="number"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/edTxtPeso"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:hint="Peso"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edTxtAltura" />
+        <EditText
+            android:id="@+id/edTxtNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nome"
+            android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/btnCalcularIMC"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:text="Calcular IMC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edTxtPeso" />
+        <EditText
+            android:id="@+id/edTxtIdade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Idade"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edTxtSexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Sexo"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edTxtPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Perfil"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edTxtAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Altura"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edTxtPeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Peso"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnCalcularIMC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular IMC" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
