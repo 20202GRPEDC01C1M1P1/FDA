@@ -10,4 +10,9 @@ class User (
   var perfil: String,
   var altura: Float,
   var peso: Float
-  ) : Serializable
+  ) : Serializable {
+
+  fun calcularIMC() : Float {
+    return peso / (altura * altura)
+  }
+}

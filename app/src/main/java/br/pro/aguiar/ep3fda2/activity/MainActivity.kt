@@ -1,9 +1,13 @@
 package br.pro.aguiar.ep3fda2.activity
 
+import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
+import android.widget.Toast
 import br.pro.aguiar.ep3fda2.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.random.Random
@@ -22,10 +26,26 @@ class MainActivity : AppCompatActivity() {
                     this,
                     ListaUsuariosActivity::class.java
                 )
-
-            startActivity(intentListaUsuarios)
+            startActivityForResult(
+                intentListaUsuarios, 100
+            )
         }
+    }
 
+    override fun onActivityResult(
+        requestCode: Int, resultCode: Int, data: Intent?)
+    {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 100){
+            if (resultCode == Activity.RESULT_CANCELED){
+                var info = data?.getStringExtra("info")
+                Toast.makeText(
+                    this, info, Toast.LENGTH_LONG
+                ).show()
+            } else if (resultCode == Activity.RESULT_OK){
+                // Resposta negativa
+            }
+        }
     }
 
     fun actionClickTipoDados(minhaView: View){

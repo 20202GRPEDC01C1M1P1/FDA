@@ -3,6 +3,7 @@ package br.pro.aguiar.ep3fda2.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import br.pro.aguiar.ep3fda2.R
 import br.pro.aguiar.ep3fda2.model.User
 import kotlinx.android.synthetic.main.activity_form_imc.*
@@ -27,14 +28,20 @@ class FormImcActivity : AppCompatActivity() {
                     altura.toFloat(), peso.toFloat()
                 )
 
-            var transicao =
-                Intent(this,
-                    ResultImcActivity::class.java)
-            transicao.putExtra("usuario", user)
-            startActivity(transicao)
+            // Abrir a base
+            // executar a query passo o user
+            // validar se a query foi executada
+
+            // var validador = user.save() : Boolean
+
+            Toast.makeText(
+                this,
+                "O seu IMC é ${user.calcularIMC()}",
+                Toast.LENGTH_LONG
+            ).show()
+
         }
 
-//        ResultImcActivity
     }
 
 }

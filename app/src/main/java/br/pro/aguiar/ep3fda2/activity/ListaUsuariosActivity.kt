@@ -1,5 +1,6 @@
 package br.pro.aguiar.ep3fda2.activity
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,13 +16,23 @@ class ListaUsuariosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_lista_usuarios)
 
         btnAct1.setOnClickListener {
-            var tansicao = Intent(
-                    this, Activity1::class.java
-                )
-            tansicao.putExtra("idade", 10)
-            tansicao.putExtra("cidade", "Rio de Janeiro")
 
-            startActivity(tansicao)
+            // processamento.....
+
+            var result = Intent()
+            result.putExtra("info", "Olá")
+            setResult(Activity.RESULT_OK, result)
+            finish()
+
+            /*
+//            var tansicao = Intent(
+//                    this, Activity1::class.java
+//                )
+//            tansicao.putExtra("idade", 10)
+//            tansicao.putExtra("cidade", "Rio de Janeiro")
+//
+//            startActivity(tansicao)
+             */
         }
 
         // btnAct2 -> Activity2::class.java
