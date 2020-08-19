@@ -6,31 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-
     <fragment
-        android:id="@+id/fragment2"
-        android:name="br.pro.aguiar.ep3fda2.DadoFragment"
+        android:id="@+id/fragment3"
+        android:name="br.pro.aguiar.ep3fda2.LoginFragment"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_dado" />
-
-    <fragment
-        android:id="@+id/fragment"
-        android:name="br.pro.aguiar.ep3fda2.DadoFragment"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment2"
-        tools:layout="@layout/fragment_dado" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_login" />
 </androidx.constraintlayout.widget.ConstraintLayout>
