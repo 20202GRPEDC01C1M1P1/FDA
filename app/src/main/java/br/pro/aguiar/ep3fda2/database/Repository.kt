@@ -1,5 +1,6 @@
 package br.pro.aguiar.ep3fda2.database
 
+import br.pro.aguiar.ep3fda2.model.Leitura
 import br.pro.aguiar.ep3fda2.model.Livro
 import br.pro.aguiar.ep3fda2.model.Usuario
 
@@ -18,9 +19,14 @@ class Repository {
         }
         return null
     }
-
     fun livrosAll() : List<Livro>{
         return livros
+    }
+    fun leituraShow() : Leitura {
+        return Leitura(
+            livros.get(3),
+            987
+        )
     }
 
     var usuarios = listOf(
@@ -43,5 +49,4 @@ class Repository {
             "Marcia Pereira",
             487)
     )
-
 }

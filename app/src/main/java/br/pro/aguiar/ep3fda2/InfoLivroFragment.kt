@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import br.pro.aguiar.ep3fda2.database.Repository
 import kotlinx.android.synthetic.main.fragment_info_livro.*
 
 class InfoLivroFragment : Fragment() {
@@ -19,9 +20,12 @@ class InfoLivroFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        txtInfoLivroTitulo.text = "Dominando Kotlin"
-        txtInfoLivroSubTitulo.text = "Android com Kotlin"
-        txtInfoLivroAutor.text = "Joao Pereira"
-        txtInfoLivroPaginaAtual.text = "40"
+
+        var leitura = Repository().leituraShow()
+
+        txtInfoLivroTitulo.text = leitura.livro.titulo
+        txtInfoLivroSubTitulo.text = leitura.livro.subtitulo
+        txtInfoLivroAutor.text = leitura.livro.autor
+        txtInfoLivroPaginaAtual.text = leitura.paginaAtual.toString()
     }
 }

@@ -5,4 +5,8 @@ class Livro (
     var subtitulo : String,
     var autor : String,
     var numPaginas: Int
-)
+) {
+    override fun toString(): String {
+        return titulo
+    }
+}
